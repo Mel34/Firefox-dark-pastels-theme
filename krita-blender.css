@@ -1,0 +1,38 @@
+/*
+ * Krita blender
+ */
+:root {
+    --tabline-active: #5c738a !important;
+    --tabline-inactive: #444445 !important;
+    --tab-bg: #585858 !important;
+    --primary-bg: #646464 !important;
+    --browser-bg: #404040 !important;
+    --tabs-border-color: #4b4b4b !important;
+    --text-color: white !important;
+    --selected: #6b6b6b !important;
+    --border-color: #8c8c8c !important;
+    --border-color-inactive: var(--browser-bg) !important;
+    --close-icon-hover: #787878 !important;
+    --window-bg: #aaaaaa !important;
+    --backbutton-active-background: var(--browser-bg) !important;
+    --backbutton-background: var(--primary-bg) !important;
+    --backbutton-hover-background: var(--tab-bg) !important;
+    --selection-text-color: #ffffff !important;
+    --selection-bg: #5983c5 !important;
+        
+}
+::-moz-selection {
+  color: var(--selection-text-color) !important;
+  background: var(--selection-bg) !important;
+}
+
+/*
+ * Inactive window loses tab line
+ */ 
+.tab-line{
+    background-color: var(--tabline-active)!important;
+}
+.tab-line:-moz-window-inactive{ 
+    background-color: var(--tabline-inactive)!important;
+} 
+

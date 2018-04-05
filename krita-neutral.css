@@ -1,0 +1,26 @@
+/*
+ * Krita neutral
+ */
+:root {
+    --tabline-active: #6c6c6c !important;
+    --tabline-inactive: #999999 !important;
+    --tab-bg: #707070 !important;
+    --primary-bg: #808080 !important;
+    --browser-bg: #aaaaaa !important;
+    --tabs-border-color: #707070 !important;
+    --text-color: black !important;
+    --inactive-x: #4a4a4a !important;
+    --selected: #6b6b6b !important;
+    --border-color: #767676 !important;
+    --close-icon-hover: #b8b8b8 !important;
+    --window-bg: #aaaaaa !important;
+    --backbutton-active-background: var(--browser-bg) !important;
+    --backbutton-background: var(--primary-bg) !important;
+    --backbutton-hover-background: var(--tab-bg) !important;
+    --border-color-inactive: var(--primary-bg) !important;
+}
+::-moz-selection {
+  color: #b4b4b4 !important;
+  background: #2a5b8f !important;
+}
+

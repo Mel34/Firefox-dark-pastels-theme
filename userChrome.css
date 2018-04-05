@@ -1,0 +1,330 @@
+/*
+ * Import stylesheet
+ * 
+@import "krita-blender.css";
+@import "krita-neutral.css";
+ */
+@import "dark-pastels.css";
+
+::-moz-selection {
+    color: var(--selected-text) !important;
+    background: var(--selected-bg) !important;
+}
+.tabbrowser-tab::before, 
+.tabbrowser-tab::after{
+    display: none !important;
+}
+.tabbrowser-tab {
+    border: none !important;
+}
+.tabbrowser-tab[visuallyselected="true"] {
+    border-top: none !important;
+    border-left: 1px solid var(--tabs-border-color) !important;
+    border-right: 1px solid var(--tabs-border-color) !important;
+    border-bottom: none !important;
+    border-radius: 2px 2px 0px 0px !important;
+}
+.tabbrowser-tab:first-of-type{
+    border-left: none !important;
+}
+
+toolbar[brighttext] {
+   --toolbarbutton-icon-fill-attention: var(--text-color) !important;
+ }
+#navigator-toolbox::after{
+  border-bottom-color: var(--primary-bg) !important;
+}
+#TabsToolbar .tabbrowser-tab {
+    background: var(--tab-bg) !important;
+}
+#TabsToolbar .toolbarbutton-1{
+    transform: scale(0.8) !important;
+}
+#nav-bar-customization-target {
+    background: var(--primary-bg) !important;
+}
+#urlbar {
+    background: var(--browser-bg) !important;
+    color: var(--text-color) !important;
+    border-color: var(--selected-bg) !important;
+}
+#urlbar:-moz-window-inactive {
+    border-color: var(--border-color-inactive) !important;
+}
+#navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(:-moz-lwtheme) {
+    background-color: var(--primary-bg) !important;
+}
+#TabsToolbar .tabbrowser-tab:hover, .tabbrowser-tab[selected] {
+    color: var(--text-color) !important;
+    background-color: var(--primary-bg) !important;
+}
+#TabsToolbar .tab-background {
+    background: none !important;
+} 
+#TabsToolbar .tab-background[selected] {
+    background: var(--primary-bg) !important;
+} 
+#PersonalToolbar {
+    background: var(--primary-bg) !important;
+}
+menubar[id="main-menubar"] > menu {
+    -moz-appearance: none !important;
+    height: 30px !important;
+    background-color: transparent !important;
+    color: var(--text-color) !important;  
+}
+menubar[id="main-menubar"] > menu:hover {
+    background-color: var(--selected-bg) !important;
+    color: var(--selected-text) !important;
+}
+
+#nav-bar-overflow-button, #toolbar-menubar,#nav-bar-customization-target,#PanelUI-button,#main-window,#TabsToolbar,findbar {
+    color: var(--text-color) !important;
+    -moz-appearance: none !important;
+    background-color: var(--primary-bg) !important;
+}
+
+#nav-bar{
+    background-image: none !important;
+}
+
+.tab-line{
+    display: none!important;
+}
+
+/*
+ * Disable webrtc indicator
+ */
+ #webrtcIndicator {
+    display: none !important;
+}
+
+/*
+ * Remove "Set as Desktop Background", "Email Image", "Send Page to Device", "Send Link to Device", 
+ * "Send Tab to Device" from context menu.
+ */
+#context-setDesktopBackground, #context-sendimage,
+#context-sendpagetodevice, #context-sep-sendpagetodevice,
+#context-sendlinktodevice, #context-sep-sendlinktodevice,
+#context_sendTabToDevice, #context_sendTabToDevice_separator {
+    display: none !important;
+}
+
+/*
+ * Enable mouse wheel change tabs
+ * Note: place bindings.xml in chrome folder
+ */
+.tabbrowser-arrowscrollbox > .arrowscrollbox-scrollbox {
+    -moz-binding: url("bindings.xml#tabs-scroll") !important;
+}
+
+/*
+ * Style back and forward buttons and menu for KDE integration
+ */
+#back-button {
+    list-style-image: url("back.svg") !important;
+}
+#forward-button {
+    list-style-image: url("forward.svg") !important;
+}
+#PanelUI-menu-button {
+    list-style-image: url("menu.svg") !important;
+}
+
+/*
+ * Remove appMenu separators
+ */
+#widget-overflow-mainView > .panel-subview-body > toolbarseparator, .PanelUI-subView menuseparator, menupopup menuseparator,
+.PanelUI-subView toolbarseparator, .cui-widget-panelview menuseparator, .cui-widget-panel toolbarseparator {
+    display: none !important;
+}
+
+/*
+ * Remove appMenu zoom controls,edit controls,sync,more
+ */  
+#appMenu-zoom-controls, #appMenu-edit-controls,
+#appMenu-fxa-container, #appMenu-more-button {
+    display: none !important;
+}
+.close-icon{
+    transform: scale(0.8) !important;
+    color: var(--inactive-x) !important;
+}
+.close-icon:hover {
+    fill-opacity: 0 !important;
+    color: var(--primary-bg) !important;
+    border-radius: 16px !important;
+    background-color: var(--close-icon-hover) !important;
+}
+
+findbar .close-icon:hover{
+    margin-top: 8px !important;
+    max-height: 24px !important;
+}
+
+menu, menulist, menuitem{
+    color: var(--text-color) !important;
+}
+
+menupopup > *,
+#context-navigation .menuitem-iconic {
+    -moz-appearance: none !important;
+    background-color: var(--browser-bg) !important;
+    color: var(--text-color) !important;
+    padding:3px;
+}
+menupopup:hover, menu:hover, menuitem:hover,
+popup#contentAreaContextMenu menu:hover,
+menupopup#contentAreaContextMenu menuitem:hover {
+    color:var(--selected-text) !important;
+    background-color: var(--selected-bg) !important;
+}
+
+.menu-right {
+    filter: invert(95%)!important;
+}
+.subviewbutton:hover,.toolbarbutton-1:hover {
+    background: var(--selected-bg) !important;
+    color: var(--selected-text) !important;
+}
+.subviewbutton[shortcut]::after {
+    color: var(--inactive-text) !important;
+}
+
+.subviewbutton-nav:hover::after {
+    fill: var(--text-color) !important;
+}
+.subviewbutton[shortcut]:hover::after {
+    color: var(--text-color) !important;
+}
+
+.subviewbutton-nav::after {
+    fill: var(--inactive-text) !important;
+}
+  /*Darken panels to match theme*/
+.panel-arrow {
+    filter: invert(33%);
+}
+.panel-subview-body,#appMenu-zoomReset-button {
+    color: var(--text-color) !important;
+    background: var(--browser-bg) !important;
+}
+.panel-subview-footer,[class^="PanelUI-"] {
+    color: var(--text-color) !important;
+    background: var(--primary-bg) !important;
+}
+
+#PopupAutoCompleteRichResult{
+    -moz-appearance: none !important;
+    padding: 0 !important;
+    border: 1px solid var(--inactive-text) !important;
+    border-radius: 4px !important;
+    box-shadow: inset 0 0 1px 1px var(--inactive-text) !important;
+}
+
+#PopupAutoCompleteRichResult .ac-title-text {
+    color: var(--text-color) !important;
+}
+
+#PopupAutoCompleteRichResult .autocomplete-richlistbox {
+    background: var(--primary-bg) !important;
+}
+#PopupAutoCompleteRichResult .autocomplete-richlistitem:hover {
+    background-color: var(--selected-bg) !important;
+}
+#PopupAutoCompleteRichResult .autocomplete-richlistitem[selected] {
+    background-color:(--selected-bg) !important;
+}
+.autocomplete-richlistitem[selected=true] { 
+    background-color: var(--browser-bg) !important;
+} 
+.autocomplete-richlistitem[selected=true] .ac-url[selected], .ac-action[selected] {
+    color: var(--inactive-text) !important;
+}
+#PopupAutoCompleteRichResult .ac-action {
+    color: var(--text-color) !important;
+}
+#PopupAutoCompleteRichResult .ac-url {
+    color: var(--text-color) !important;
+}
+/*
+ *  White flash prevention
+ */
+#browser vbox#appcontent tabbrowser,
+#content,
+#tabbrowser-tabpanels,
+browser[type=content-primary],
+browser[type=content] > html {
+  background: var(--window-bg) !important;
+}
+dialog * {
+    color: var(--text-color) !important;
+}
+dialog {
+    -moz-appearance: none !important;
+    background-color: var(--primary-bg) !important;
+}
+menulist {
+    -moz-appearance: none !important;
+    background-color: var(--window-bg) !important;
+    color: var (--text-color) !important;
+}
+menulist:hover {
+    -moz-appearance: none !important;
+    background-color: var(--selected-bg) !important;
+    color: var (--selected-text) !important;
+}
+button:not(:-moz-any(:active, [disabled="true"], [open="true"], [checked="true"])), .dialog-button{
+    -moz-appearance: none !important;
+    padding: 3px;
+    background: var(--browser-bg) !important;
+    color: var(--text-color) !important;
+    outline-width:1px;
+    outline-style:solid;
+    outline-color: var(--inactive-text);
+}
+button:hover:not(:-moz-any(:active, [disabled="true"], [open="true"], [checked="true"])), .dialog-button:hover{
+    outline-color: var(--selected-bg);
+}
+.dialog-button:active{
+    background: var(--selected-bg) !important;
+    color: var(--selected-text) !important;
+    outline-color: var(--selected-bg);
+}
+checkbox[disabled="true"]{
+    color:var(--inactive-text) !important;
+}
+
+radio:hover, checkbox:hover{
+    color: unset !important;
+}
+richlistbox[id="items"] scrollbox {
+    color: var(--text-color) !important;
+    background-color: var(--browser-bg) !important;
+}
+richlistbox[id="items"]:focus > richlistitem[selected="true"]{
+    color: var(--selected-text) !important;
+    background-color: var(--selected-bg) !important;
+}
+richlistbox[id="items"] richlistitem[selected="true"]{
+    background-color: var(--inactive-text) !important;
+}
+richlistbox[id="items"] > button:hover{
+    -moz-appearance: none !important;
+}
+/*TODO: fix this button*/
+button[id="identity-popup-security-expander"]{
+    display: none !important;
+}
+
+#customization-panelWrapper, #customization-panelWrapper > .panel-arrowcontent, #customization-panelHolder{
+    min-height: unset !important;
+}
+
+#customization-panelHolder > #widget-overflow-fixed-list{
+    display: none !important;
+}
+#customization-footer button{
+    -moz-appearance: button !important;
+    color: var(--toolbar-non-lwt-textcolor) !important;
+}

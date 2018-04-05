@@ -1,0 +1,28 @@
+/*
+ * Dark pastels
+ */
+
+:root {
+    --tab-bg: #1e1e1e !important;
+    --primary-bg: #222222 !important;
+    --browser-bg: #3c3836 !important;
+    --tabs-border-color: #545046 !important;
+    --text-color: #f3e3ba !important;
+    --inactive-x: #837c69 !important;
+    --selected-text: #222222 !important;
+    --selected-bg: #83a598!important;
+    --border-color: #767676 !important;
+    --close-icon-hover: #8f352b !important;
+    --window-bg: #3c3836 !important;
+    --backbutton-active-background: var(--browser-bg) !important;
+    --backbutton-background: var(--primary-bg) !important;
+    --backbutton-hover-background: var(--tab-bg) !important;
+    --border-color-inactive: #545147 !important;
+    --inactive-text: #928374 !important;
+    --tab-loading-fill: var(--selected-bg) !important;
+    --arrowpanel-border-color: var(--inactive-text) !important;
+    --arrowpanel-color: var(--text-color) !important;
+    --arrowpanel-background: var(--browser-bg) !important;
+    --panel-separator-color: var(--inactive-text) !important;
+}
+
