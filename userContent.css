@@ -5,3 +5,10 @@
     }
     
 }
+
+@-moz-document domain(reddit.com)
+{
+    #sr-bar, span.separator:nth-child(6), #chat{
+        display: none !important;
+    }
+}

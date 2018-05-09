@@ -10,24 +10,26 @@
     color: var(--selected-text) !important;
     background: var(--selected-bg) !important;
 }
-.tabbrowser-tab::before, 
-.tabbrowser-tab::after{
+tab.tabbrowser-tab::before, 
+tab.tabbrowser-tab::after{
     display: none !important;
 }
-.tabbrowser-tab {
+tab.tabbrowser-tab {
     border: none !important;
 }
-.tabbrowser-tab[visuallyselected="true"] {
+tab.tabbrowser-tab[visuallyselected="true"] {
     border-top: none !important;
-    border-left: 1px solid var(--tabs-border-color) !important;
-    border-right: 1px solid var(--tabs-border-color) !important;
+    border-left: 1px solid var(--my-tabs-border-color) !important;
+    border-right: 1px solid var(--my-tabs-border-color) !important;
     border-bottom: none !important;
     border-radius: 2px 2px 0px 0px !important;
 }
-.tabbrowser-tab:first-of-type{
+tab.tabbrowser-tab:first-of-type{
     border-left: none !important;
 }
-
+#navigator-toolbox {
+    --tabs-border-color: var(--my-tabs-border-color) !important;
+}
 toolbar[brighttext] {
    --toolbarbutton-icon-fill-attention: var(--text-color) !important;
  }
@@ -38,6 +40,7 @@ toolbar[brighttext] {
     background: var(--tab-bg) !important;
 }
 #TabsToolbar .toolbarbutton-1{
+	border: solid 1px transparent;
     transform: scale(0.8) !important;
 }
 #nav-bar-customization-target {
@@ -66,6 +69,7 @@ toolbar[brighttext] {
 } 
 #PersonalToolbar {
     background: var(--primary-bg) !important;
+	height: 25px !important;
 }
 menubar[id="main-menubar"] > menu {
     -moz-appearance: none !important;
@@ -121,14 +125,16 @@ menubar[id="main-menubar"] > menu:hover {
 /*
  * Style back and forward buttons and menu for KDE integration
  */
+
 #back-button {
     list-style-image: url("back.svg") !important;
 }
 #forward-button {
     list-style-image: url("forward.svg") !important;
 }
+
 #PanelUI-menu-button {
-    list-style-image: url("menu.svg") !important;
+    list-style-image:url("menu.svg") !important;
 }
 
 /*
@@ -157,29 +163,58 @@ menubar[id="main-menubar"] > menu:hover {
     background-color: var(--close-icon-hover) !important;
 }
 
-findbar .close-icon:hover{
+/*findbar .close-icon:hover{
     margin-top: 8px !important;
     max-height: 24px !important;
-}
+}*/
 
+findbar {
+	border-top: 1px solid var(--text-color) !important;
+}
+.findbar-textbox{
+	background-color: var(--window-bg) !important;
+	color: var(--text-color) !important;
+	border: 1px solid var(--selected-bg) !important;
+}
+.findbar-find-previous, .findbar-find-next {
+	margins: 1px !important;
+	background: unset !important;
+	background-color: var(--primary-bg) !important;
+	border: none !important;
+}
+.findbar-find-previous:hover, .findbar-find-next:hover {
+	outline: 1px solid var(--selected-bg) !important;
+}
+	
 menu, menulist, menuitem{
     color: var(--text-color) !important;
 }
-
+#backForwardMenu, menupopup[class="textbox-contextmenu"], menupopup[id="tabContextMenu"], #placesContext, #toolbar-context-menu, #contentAreaContextMenu {
+	-moz-appearance: none !important;
+	border: 1px solid var(--border-color-inactive) !important;
+	border-radius: 3px !important;
+}
 menupopup > *,
 #context-navigation .menuitem-iconic {
     -moz-appearance: none !important;
     background-color: var(--browser-bg) !important;
     color: var(--text-color) !important;
-    padding:3px;
+    padding-top: 3px;
+    padding-bottom:3px;
 }
-menupopup:hover, menu:hover, menuitem:hover,
+menu:hover, menuitem:hover,
 popup#contentAreaContextMenu menu:hover,
 menupopup#contentAreaContextMenu menuitem:hover {
     color:var(--selected-text) !important;
     background-color: var(--selected-bg) !important;
 }
-
+menupopup{
+    -moz-appearance: none !important;
+    min-width: 1px;
+    color: var(--text-color);
+	border: 1px solid var(--border-color-inactive) !important;
+	border-radius: 3px !important;
+}
 .menu-right {
     filter: invert(95%)!important;
 }
@@ -316,7 +351,6 @@ richlistbox[id="items"] > button:hover{
 button[id="identity-popup-security-expander"]{
     display: none !important;
 }
-
 #customization-panelWrapper, #customization-panelWrapper > .panel-arrowcontent, #customization-panelHolder{
     min-height: unset !important;
 }
@@ -327,4 +361,61 @@ button[id="identity-popup-security-expander"]{
 #customization-footer button{
     -moz-appearance: button !important;
     color: var(--toolbar-non-lwt-textcolor) !important;
+}
+
+tooltip{
+    -moz-appearance: none !important;
+    background-color: var(--selected-bg) !important;
+    color: var(--selected-text) !important;
+    padding: 6px 12px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--browser-bg) !important;
+    border-radius: 6px !important;
+}
+
+.toolbarbutton-animatable-box, .toolbarbutton-1{
+	-moz-appearance: none !important;
+	border: 1px solid transparent !important;
+}
+.toolbarbutton-animatable-box:hover, .toolbarbutton-1:hover{
+	background: var(--primary-bg) !important;
+	border: 1px solid var(--selected-bg) !important;
+	border-radius: 3px !important;
+	color: var(--text-color) !important;
+}
+.toolbarbutton-animatable-box:active, .toolbarbutton-1:active{
+	background: var(--selected-bg) !important;
+	border: 1px solid var(--selected-bg) !important;
+	border-radius: 3px !important;
+}
+:root:-moz-lwtheme-brighttext, toolbar[brighttext] {
+    --toolbarbutton-hover-background: transparent !important;
+    --toolbarbutton-active-background: transparent !important;
+    --backbutton-background: var(--toolbarbutton-hover-background);
+    --backbutton-hover-background: var(--toolbarbutton-active-background);
+    --backbutton-active-background: var(--selected-bg) !important;
+}
+/*
+ * Bookmark items
+ */
+toolbarbutton.bookmark-item{
+	--moz-appearance: none !important;
+	border: solid 1px transparent;
+	border-radius: 3px !important;
+}
+toolbarbutton.bookmark-item:hover{
+	background: var(--primary-bg) !important;
+	border: 1px solid var(--selected-bg) !important;
+}
+/*
+ * media info
+ */
+#metaTags, #mainDeck, #topBar{
+	background-color: var(--selected-bg) !important;
+	color: var(--text-color) !important;
+}
+#viewGroup > radio[selected="true"] {
+    background-color: var(--primary-bg) !important;
+    color: var(--text-color) !important;
 }
