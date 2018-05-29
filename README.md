@@ -3,4 +3,4 @@ Homemade userChrome and accompanying color definitions trying to match [Dark Pas
 ![Preview:](https://github.com/Mel34/Firefox-dark-pastels-theme/blob/master/Preview.png)
 
 There's a couple more color themes but they haven't been updated, matching colorschemes bundled with Krita.
-To make it work, dump the files in the ~/.mozilla/firefox/<your_profile_dir>/chrome/
+To make it work, dump the files in the ~/.mozilla/firefox/_<your_profile_dir>_/chrome/
