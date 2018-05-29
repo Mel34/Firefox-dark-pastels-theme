@@ -419,3 +419,10 @@ toolbarbutton.bookmark-item:hover{
     background-color: var(--primary-bg) !important;
     color: var(--text-color) !important;
 }
+
+/*
+ * Fix for hover color of bookmarks etc
+ */
+toolbarbutton.subviewbutton:hover, toolbarbutton.highlight:hover{
+	color: var(--text-color) !important;
+}
