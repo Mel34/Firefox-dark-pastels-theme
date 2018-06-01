@@ -426,3 +426,14 @@ toolbarbutton.bookmark-item:hover{
 toolbarbutton.subviewbutton:hover, toolbarbutton.highlight:hover{
 	color: var(--text-color) !important;
 }
+
+/*
+ * Sidebar stuff
+ */
+#sidebar-box, #sidebar-splitter,.sidebar-placesTreechildren{
+	background-color: var(--primary-bg) !important;
+	color: var(--text-color) !important;
+}
+#sidebar-splitter,#sidebar-header{
+	border-color: var(--my-tabs-border-color) !important;
+}
