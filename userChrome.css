@@ -34,7 +34,10 @@ toolbar[brighttext] {
    --toolbarbutton-icon-fill-attention: var(--text-color) !important;
  }
 #navigator-toolbox::after{
-  border-bottom-color: var(--primary-bg) !important;
+  border-bottom-color: var(--selected-bg) !important;
+}
+#navigator-toolbox:-moz-window-inactive::after{
+  border-bottom-color: var(--my-tabs-border-color) !important;
 }
 #TabsToolbar .tabbrowser-tab {
     background: var(--tab-bg) !important;
@@ -49,6 +52,9 @@ toolbar[brighttext] {
 #urlbar {
     background: var(--browser-bg) !important;
     color: var(--text-color) !important;
+    border-color: var(--border-color-inactive) !important;
+}
+#urlbar:hover, #urlbar:focus-within {
     border-color: var(--selected-bg) !important;
 }
 #urlbar:-moz-window-inactive {
@@ -436,4 +442,9 @@ toolbarbutton.subviewbutton:hover, toolbarbutton.highlight:hover{
 }
 #sidebar-splitter,#sidebar-header{
 	border-color: var(--my-tabs-border-color) !important;
+}
+#search-box{
+	-moz-appearance: none !important;
+	background-color: var(--browser-bg) !important;
+	color: var(--text-color) !important;
 }
